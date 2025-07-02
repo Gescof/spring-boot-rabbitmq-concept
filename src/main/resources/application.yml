@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-boot-rabbitmq-concept
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+    # Enable RabbitMQ admin to auto-declare queues and exchanges
+    dynamic: true
+
+# RabbitMQ Project Configuration
+rabbitmq:
+  queue:
+    name: ${RABBITMQ_QUEUE_NAME:demo_queue}
+  exchange:
+    name: ${RABBITMQ_EXCHANGE_NAME:demo_exchange}
+  routing:
+    key: ${RABBITMQ_ROUTING_KEY:demo_routing_key}
